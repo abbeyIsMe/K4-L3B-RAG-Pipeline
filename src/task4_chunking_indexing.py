@@ -14,6 +14,11 @@ chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung
 from pathlib import Path
 
 import os
+<<<<<<< HEAD
+=======
+import re
+from functools import lru_cache
+>>>>>>> origin/main
 
 from dotenv import load_dotenv
 
@@ -35,6 +40,16 @@ COLLECTION_NAME = "rag_documents"
 
 load_dotenv()
 
+<<<<<<< HEAD
+=======
+
+@lru_cache(maxsize=4)
+def _get_sentence_transformer(model_name: str):
+    from sentence_transformers import SentenceTransformer
+
+    return SentenceTransformer(model_name)
+
+>>>>>>> origin/main
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Embed texts bằng provider được cấu hình trong môi trường."""
@@ -46,13 +61,20 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
 
     if provider == "sentence_transformers":
         try:
+<<<<<<< HEAD
             from sentence_transformers import SentenceTransformer
+=======
+            model = _get_sentence_transformer(model_name)
+>>>>>>> origin/main
         except ImportError as exc:
             raise RuntimeError(
                 "EMBEDDING_PROVIDER=sentence_transformers requires "
                 "sentence-transformers to be installed"
             ) from exc
+<<<<<<< HEAD
         model = SentenceTransformer(model_name)
+=======
+>>>>>>> origin/main
         return model.encode(texts, normalize_embeddings=True).tolist()
 
     if provider == "openai":
@@ -99,14 +121,25 @@ def load_documents() -> list[dict]:
             continue
         relative = path.relative_to(STANDARDIZED_DIR)
         doc_type = "legal" if "legal" in relative.parts else "news"
+<<<<<<< HEAD
+=======
+        title_match = re.search(r"^#\s+(.+?)\s*$", content, flags=re.MULTILINE)
+        url_match = re.search(r"^\*\*Source:\*\*\s*(\S+)\s*$", content, flags=re.MULTILINE)
+>>>>>>> origin/main
         document = {
             "id": relative.as_posix(),
             "content": content,
             "metadata": {
                 "source": path.name,
+<<<<<<< HEAD
                 "title": path.stem,
                 "doc_type": doc_type,
                 "url": None,
+=======
+                "title": title_match.group(1).strip() if title_match else path.stem,
+                "doc_type": doc_type,
+                "url": url_match.group(1).strip() if url_match else None,
+>>>>>>> origin/main
             },
         }
         validate_document(document)
