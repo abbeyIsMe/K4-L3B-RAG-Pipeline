@@ -83,10 +83,14 @@ def get_collection():
     import chromadb
 
     CHROMA_DIR.mkdir(parents=True, exist_ok=True)
-    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+    client = chromadb.PersistentClient(
+        path=str(CHROMA_DIR),
+        settings=chromadb.Settings(anonymized_telemetry=False),
+    )
     return client.get_or_create_collection(
         name=COLLECTION_NAME,
         metadata={"hnsw:space": "cosine"},
+        embedding_function=None,
     )
 
 

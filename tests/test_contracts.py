@@ -113,6 +113,34 @@ def test_chunk_documents_preserves_identity_and_metadata():
         assert len(chunk["content"]) <= int(CHUNK_SIZE * 1.1)
 
 
+def test_collection_disables_chromas_default_embedding(monkeypatch, tmp_path):
+    import sys
+    from types import SimpleNamespace
+
+    from src import task4_chunking_indexing as indexing
+
+    calls = {}
+
+    class FakeClient:
+        def get_or_create_collection(self, **kwargs):
+            calls.update(kwargs)
+            return object()
+
+    monkeypatch.setattr(indexing, "CHROMA_DIR", tmp_path)
+    monkeypatch.setitem(
+        sys.modules,
+        "chromadb",
+        SimpleNamespace(
+            PersistentClient=lambda **kwargs: FakeClient(),
+            Settings=lambda **kwargs: kwargs,
+        ),
+    )
+
+    indexing.get_collection()
+
+    assert calls["embedding_function"] is None
+
+
 def test_semantic_search_uses_shared_embedding_and_contract(monkeypatch):
     import src.task5_semantic_search as semantic
 

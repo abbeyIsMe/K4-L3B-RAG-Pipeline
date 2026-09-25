@@ -1,0 +1,876 @@
+{
+  "run_at_utc": "2026-09-25T07:30:33.248974+00:00",
+  "dataset_size": 15,
+  "top_k": 5,
+  "embedding_model": "text-embedding-3-small",
+  "generator_model": "gpt-4o-mini",
+  "evaluator_model": "gpt-4o-mini",
+  "retrieval_backend": "Exact cosine over real OpenAI embeddings; in-memory adapter (native Chroma upsert crashes on Windows)",
+  "corpus_files": 10,
+  "summary": {
+    "dense-only": {
+      "faithfulness": 0.8357142857142857,
+      "answer_relevancy": 0.42808184728665305,
+      "context_recall": 0.6666666666666666,
+      "context_precision": 0.5862962962661327,
+      "average": 0.6291897739834346,
+      "mean_latency_seconds": 6.176520146660429,
+      "expected_source_hit_at_5": 0.8
+    },
+    "hybrid-rrf": {
+      "faithfulness": 0.9793650793650793,
+      "answer_relevancy": 0.545386226157723,
+      "context_recall": 0.8333333333333334,
+      "context_precision": 0.7418518518271049,
+      "average": 0.7749841226708102,
+      "mean_latency_seconds": 7.589754939997025,
+      "expected_source_hit_at_5": 0.9333333333333333
+    }
+  },
+  "rows": {
+    "dense-only": [
+      {
+        "question": "HUTECH áp dụng những phương thức tuyển sinh đại học chính quy nào trong năm 2026?",
+        "expected_answer": "Bốn phương thức chính là xét điểm thi tốt nghiệp THPT, xét học bạ sáu học kỳ, xét điểm V-SAT và xét điểm kỳ thi đánh giá năng lực của ĐHQG TP.HCM. Trường còn thực hiện xét tuyển thẳng và ưu tiên theo quy định.",
+        "expected_context": "article_01.md",
+        "response": "Tôi không thể xác minh thông tin về các phương thức tuyển sinh đại học chính quy của HUTECH trong năm 2026 từ các tài liệu đã cung cấp.",
+        "retrieved_contexts": [
+          "# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630721-hutech-cong-bo-phuong-an-tuyen-sinh-dai-hoc-chinh-quy-du-kien-nam-2026\n\n**Crawled:** 2026-09-25T10:26:27.038441\n\n---\n\n# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)",
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_06.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "hutech_2026_hoc_bong.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 7.701338199985912,
+        "metrics": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.9999999999
+        }
+      },
+      {
+        "question": "Học bạ được tính điểm xét tuyển theo phương thức nào của HUTECH 2026?",
+        "expected_answer": "Điểm xét tuyển học bạ là tổng điểm trung bình của ba môn trong tổ hợp xét tuyển qua sáu học kỳ lớp 10, 11 và 12.",
+        "expected_context": "article_01.md",
+        "response": "Học bạ được tính điểm xét tuyển theo phương thức xét tuyển học bạ THPT của HUTECH 2026 (Document 2).",
+        "retrieved_contexts": [
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "Trang tuyển sinh đại học chính quy của HUTECH giới thiệu các phương thức tuyển sinh năm 2026 gồm: xét kết quả kỳ thi tốt nghiệp THPT 2026; xét kết quả kỳ thi đánh giá đầu vào đại học trên máy tính V-SAT 2026; xét kết quả kỳ thi đánh giá năng lực 2026 của Đại học Quốc gia TP.HCM; xét tuyển thẳng hoặc ưu tiên xét tuyển theo quy định và các chứng chỉ quốc tế SAT, ACT, A level, IB; và xét tuyển học bạ THPT. Thí sinh cần đối chiếu điều kiện và thời gian đăng ký trên thông báo chính thức của HUTECH.",
+          "-\nTốt nghiệp THPT hoặc tương đương.\n\n-\nTham dự kỳ thi đánh giá năng lực 2026 do ĐHQG TP. HCM tổ chức và đạt điểm đảm bảo chất lượng đầu vào đại học do HUTECH quy định.\n\n-\nĐối với các ngành: Luật, Luật kinh tế, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học, Y khoa: đạt ngưỡng đảm bảo chất lượng đầu vào theo quy định.\n\nLƯU Ý:\n\n* Xét tuyển thẳng:\n\nNgoài 04 phương thức trên, HUTECH thực hiện xét tuyển thẳng và ưu tiên xét tuyển theo đúng quy định của Bộ GD&ĐT.",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)"
+        ],
+        "retrieved_sources": [
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_01.md",
+          "article_06.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 5.009565199987264,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7353920689982042,
+          "context_recall": 0.0,
+          "context_precision": 0.3333333333
+        }
+      },
+      {
+        "question": "Hạn đăng ký Học bổng Tuyển sinh HUTECH 2026 là ngày nào?",
+        "expected_answer": "Thí sinh đăng ký học bổng trực tuyến đến ngày 15/07/2026.",
+        "expected_context": "article_02.md",
+        "response": "Hạn đăng ký học bổng tuyển sinh HUTECH 2026 cần được kiểm tra lại trên thông báo chính thức (Document 2).",
+        "retrieved_contexts": [
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "**Collected:** 2026-09-25\n\n---\n\nHUTECH công bố học bổng tuyển sinh năm 2026 với các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT. Tiêu chí học bạ có thể dựa trên tổng điểm trung bình ba môn lớp 11, ba môn học kỳ 1 lớp 12 hoặc ba môn cả năm lớp 12. Trang cũng nêu các nhóm học bổng Tài năng Tân sinh viên, Tiếp sức và Giáo dục với điều kiện riêng. Thời hạn đăng ký học bổng cần được kiểm tra lại trên thông báo chính thức.",
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630721-hutech-cong-bo-phuong-an-tuyen-sinh-dai-hoc-chinh-quy-du-kien-nam-2026\n\n**Crawled:** 2026-09-25T10:26:27.038441\n\n---\n\n# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026"
+        ],
+        "retrieved_sources": [
+          "hutech_2026_hoc_bong.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "hutech_2026_hoc_bong.md",
+          "article_02.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 13.297108800004935,
+        "metrics": {
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.0,
+          "context_recall": 1.0,
+          "context_precision": 0.249999999975
+        }
+      },
+      {
+        "question": "Học phí khóa 2026 được giữ ổn định trong thời gian nào?",
+        "expected_answer": "Học phí được công bố từ đầu khóa và giữ ổn định trong toàn khóa học theo thời gian đào tạo chuẩn của từng ngành/chương trình.",
+        "expected_context": "article_02.md",
+        "response": "Học phí khóa 2026 được giữ ổn định trong toàn bộ thời gian đào tạo theo chương trình chuẩn của từng ngành (Document 3).",
+        "retrieved_contexts": [
+          "Học phí cố định và giữ ổn định trong toàn khóa học giúp thí sinh, phụ huynh chủ động kế hoạch tài chính\n\nHọc phí khóa 2026 được phân theo nhóm ngành/chương trình đào tạo, thời gian đào tạo, số đợt đóng học phí và được thu theo các đợt cố định. Mỗi năm học, Nhà trường tổ chức 04 đợt thu học phí theo mức đã công bố. Cách thu này giúp giảm áp lực tài chính, đồng thời tạo điều kiện để gia đình dễ dàng sắp xếp kế hoạch chi trả theo từng giai đoạn học tập.\n\nII. Chính sách học bổng: đa dạng, hấp dẫn",
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "# HUTECH công bố chính sách học phí và học bổng khóa 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Crawled:** 2026-09-25T10:26:29.997525\n\n---\n\n# HUTECH công bố chính sách học phí và học bổng khóa 2026",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 10.271646299981512,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8030226378605976,
+          "context_recall": 1.0,
+          "context_precision": 0.94999999997625
+        }
+      },
+      {
+        "question": "Mỗi năm HUTECH thu học phí thành bao nhiêu đợt?",
+        "expected_answer": "Nhà trường tổ chức bốn đợt thu học phí mỗi năm học theo mức đã công bố.",
+        "expected_context": "article_02.md",
+        "response": "Xin lỗi, nhưng thông tin về số đợt thu học phí mỗi năm của HUTECH không có trong các tài liệu đã cung cấp.",
+        "retrieved_contexts": [
+          "HUTECH có học bổng đặc biệt trị giá 30% học phí toàn khóa dành cho nhóm ngành Khoa học sức khỏe\n\nCùng với Học bổng Tuyển sinh, Trường thực hiện các chính sách học bổng đa dạng và hấp dẫn, bao gồm: Học bổng Tài năng Tân sinh viên, Học bổng Tiếp sức (trị giá 50-75-100% học phí toàn khóa); Học bổng Giáo dục (trị giá 30% học phí toàn khóa); Học bổng Gia đình (trị giá 5% học phí toàn khóa);…",
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "Cùng với chính sách học phí ổn định, HUTECH triển khai nhiều chương trình học bổng đa dạng dành cho tân sinh viên khóa 2026, tạo thêm điều kiện để người học yên tâm lựa chọn ngành học phù hợp và phát triển trong môi trường đại học.\n\nI. Chính sách học phí: công bố minh bạch, ổn định toàn khóa",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "article_02.md",
+          "article_01.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 2.6408241000026464,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        }
+      },
+      {
+        "question": "Học bổng Tuyển sinh 2026 có những mức hỗ trợ nào?",
+        "expected_answer": "Học bổng Tuyển sinh dành cho thí sinh có thành tích học tập THPT có các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Học bổng Tuyển sinh 2026 có các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT (Document 1).",
+        "retrieved_contexts": [
+          "2.1. Học bổng Tuyển sinh\n\nHUTECH trao tặng Học bổng Tuyển sinh 2026 cho thí sinh có thành tích học tập tốt ở bậc THPT, với các mức hỗ trợ 25% - 50% - 100% học phí toàn khóa.\n\nHọc bổng áp dụng cho thí sinh trên toàn quốc, xét dựa trên kết quả học bạ THPT theo một trong các tiêu chí:\n\n- Tổng điểm trung bình 3 môn lớp 11\n\n- Tổng điểm trung bình 3 môn HK1 lớp 12\n\n- Tổng điểm trung bình 3 môn cả năm lớp 12\n\nCụ thể mức nhận học bổng như sau:",
+          "**Collected:** 2026-09-25\n\n---\n\nHUTECH công bố học bổng tuyển sinh năm 2026 với các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT. Tiêu chí học bạ có thể dựa trên tổng điểm trung bình ba môn lớp 11, ba môn học kỳ 1 lớp 12 hoặc ba môn cả năm lớp 12. Trang cũng nêu các nhóm học bổng Tài năng Tân sinh viên, Tiếp sức và Giáo dục với điều kiện riêng. Thời hạn đăng ký học bổng cần được kiểm tra lại trên thông báo chính thức.",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "hutech_2026_hoc_bong.md",
+          "article_02.md",
+          "article_02.md",
+          "hutech_2026_hoc_bong.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.7002287000068463,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5671567874756015,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999995
+        }
+      },
+      {
+        "question": "Điều kiện nhận học bổng 30% cho khối Khoa học sức khỏe năm 2026 là gì?",
+        "expected_answer": "Thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển một trong các ngành Y khoa, Dược học, Điều dưỡng hoặc Kỹ thuật xét nghiệm y học sẽ được học bổng 30% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Điều kiện nhận học bổng 30% cho khối Khoa học sức khỏe năm 2026 là thí sinh phải đăng ký học bổng trước ngày 15/7 và trúng tuyển vào các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học (Document 1).",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "Bên cạnh đó, HUTECH áp dụng học bổng y tế 35% học phí toàn khóa dành cho con, em cán bộ, nhân viên y tế đang công tác tại các bệnh viện, phòng khám, trung tâm y tế và cơ sở chăm sóc sức khỏe trên cả nước.\n\nHai chính sách học bổng 30% và 35% dành cho khối ngành Y và Khoa học sức khỏe không yêu cầu điều kiện duy trì qua từng học kỳ/năm học.\n\n2. Học bổng dành cho các ngành/chương trình đào tạo Cử nhân, Kỹ sư và nhóm ngành khác\n\n2.1. Học bổng Tuyển sinh",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_01.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 8.249041100003524,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6140280049449184,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999998
+        }
+      },
+      {
+        "question": "Con em nhân viên y tế trúng tuyển HUTECH 2026 được học bổng nào?",
+        "expected_answer": "Con, em cán bộ hoặc nhân viên y tế đang công tác tại cơ sở chăm sóc sức khỏe được học bổng y tế 35% học phí toàn khóa; học bổng này không yêu cầu điều kiện duy trì qua từng học kỳ hoặc năm học.",
+        "expected_context": "article_02.md",
+        "response": "Con em nhân viên y tế trúng tuyển HUTECH 2026 sẽ được nhận học bổng 30% học phí toàn khóa nếu đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, bao gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học (Document 2).",
+        "retrieved_contexts": [
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---",
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)"
+        ],
+        "retrieved_sources": [
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "hutech_2026_hoc_bong.md",
+          "article_02.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "article_06.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 4.167580399982398,
+        "metrics": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.5700323415033214,
+          "context_recall": 0.0,
+          "context_precision": 0.49999999995
+        }
+      },
+      {
+        "question": "Ai có thể nhận Học bổng Tài năng Tân sinh viên và giá trị học bổng là bao nhiêu?",
+        "expected_answer": "Tân sinh viên chính quy 2026 đạt giải từ cấp tỉnh/thành phố trở lên trong các kỳ thi học sinh giỏi, khoa học kỹ thuật, năng khiếu văn hóa, nghệ thuật hoặc thể thao có thể được học bổng 50%, 75% hoặc 100% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Học bổng Tài năng Tân sinh viên dành cho tân sinh viên chính quy khóa 2026 đạt giải Nhất, Nhì, Ba trong các cuộc thi Quốc tế, HSG cấp Quốc gia hoặc cuộc thi Khoa học kỹ thuật cấp Quốc gia; các kỳ thi năng khiếu văn hóa, nghệ thuật, thể thao cấp Quốc gia; hoặc kỳ thi HSG, Olympic, văn hóa, nghệ thuật, thể thao từ cấp Tỉnh/Thành phố trở lên trong thời gian học THPT. Giá trị học bổng là 50%, 75%, hoặc 100% học phí toàn khóa học (Document 1).",
+        "retrieved_contexts": [
+          "2.2. Học bổng Tài năng Tân sinh viên\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 đạt giải Nhất, Nhì, Ba trong các cuộc thi Quốc tế, HSG cấp Quốc gia hoặc cuộc thi Khoa học kỹ thuật cấp Quốc gia; các kỳ thi năng khiếu văn hóa, nghệ thuật, thể thao cấp Quốc gia; hoặc kỳ thi HSG, Olympic, văn hóa, nghệ thuật, thể thao từ cấp Tỉnh/Thành phố trở lên trong thời gian học THPT.\n\n- Giá trị học bổng: 50%, 75%, 100% học phí toàn khóa học.",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "- Mồ côi, thuộc diện hộ nghèo/cận nghèo;\n\n- Bị khuyết tật có giấy xác nhận khuyết tật của cơ quan có thẩm quyền cấp;\n\n- Dân tộc thiểu số, thuộc diện hộ nghèo/cận nghèo.\n\n- Giá trị học bổng: 50%, 75%, 100% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Tiếp sức áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên và điểm trung bình học tập từ 2.5/4.0.\n\n2.4. Học bổng Giáo dục",
+          "- Điều kiện duy trì học bổng: Học bổng Tài năng áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được.\n\n2.3. Học bổng Tiếp sức\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 có học lực trung bình 3 năm THPT đạt loại Khá trở lên và hoàn cảnh đặc biệt khó khăn đáp ứng 01 trong các tiêu chí:"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 4.595701999991434,
+        "metrics": {
+          "faithfulness": 0.2857142857142857,
+          "answer_relevancy": 0.5710385541201994,
+          "context_recall": 1.0,
+          "context_precision": 0.9166666666361111
+        }
+      },
+      {
+        "question": "Điều kiện duy trì Học bổng Tài năng sau năm đầu tiên là gì?",
+        "expected_answer": "Sinh viên cần đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập tối thiểu là 2.5/4.0 với học bổng 50%, và 3.2/4.0 với học bổng 75% hoặc 100%.",
+        "expected_context": "article_02.md",
+        "response": "Điều kiện duy trì Học bổng Tài năng sau năm đầu tiên là sinh viên phải đạt điểm rèn luyện từ 80 trở lên và điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được (Document 1).",
+        "retrieved_contexts": [
+          "- Điều kiện duy trì học bổng: Học bổng Tài năng áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được.\n\n2.3. Học bổng Tiếp sức\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 có học lực trung bình 3 năm THPT đạt loại Khá trở lên và hoàn cảnh đặc biệt khó khăn đáp ứng 01 trong các tiêu chí:",
+          "2.2. Học bổng Tài năng Tân sinh viên\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 đạt giải Nhất, Nhì, Ba trong các cuộc thi Quốc tế, HSG cấp Quốc gia hoặc cuộc thi Khoa học kỹ thuật cấp Quốc gia; các kỳ thi năng khiếu văn hóa, nghệ thuật, thể thao cấp Quốc gia; hoặc kỳ thi HSG, Olympic, văn hóa, nghệ thuật, thể thao từ cấp Tỉnh/Thành phố trở lên trong thời gian học THPT.\n\n- Giá trị học bổng: 50%, 75%, 100% học phí toàn khóa học.",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "Tỉnh/Thành phố trở lên trong thời bổng 50%) và từ 3.2/4.0 (đối với\ngian học trung học phổ thông học bổng 75%, 100%) tùy theo\n(THPT) mức học bổng nhận được\nHọc lực trung bình 03 năm THPT\nđạt loại Khá trở lên, có hoàn cảnh\nđặc biệt khó khăn đáp ứng một trong\n50%, 75%, 100% học phí trong\ncác tiêu chí sau:\nnăm học đầu tiên, được duy trì\n- Mồ côi, thuộc diện hộ nghèo/ cận\ntrong các năm học tiếp theo nếu\n5 Tiếp sức nghèo.\nsinh viên đạt điểm rèn luyện từ\n- Bị khuyết tật có giấy xác nhận"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 9.086895199987339,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5194245205706017,
+          "context_recall": 1.0,
+          "context_precision": 0.7555555555303703
+        }
+      },
+      {
+        "question": "HUTECH tuyển sinh 2026 bao nhiêu chương trình đào tạo thuộc bao nhiêu lĩnh vực?",
+        "expected_answer": "HUTECH tuyển sinh 64 chương trình đào tạo thuộc sáu lĩnh vực.",
+        "expected_context": "article_01.md",
+        "response": "HUTECH tuyển sinh 2026 với 64 chương trình đào tạo thuộc 06 lĩnh vực (Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe) (Document 1).",
+        "retrieved_contexts": [
+          "Năm nay, HUTECH tuyển sinh 64 chương trình đào tạo thuộc 06 lĩnh vực gồm: Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe. Đây đều là những lĩnh vực Nhà trường có thế mạnh đào tạo theo định hướng ứng dụng nhiều năm qua, đồng thời đáp ứng nhu cầu nhân lực chất lượng cao trong bối cảnh chuyển đổi số và phát triển kinh tế - xã hội giai đoạn mới.\n\n|\n|",
+          "---\n\nTrang thông tin tuyển sinh HUTECH 2026 công bố danh mục chương trình đào tạo, mã xét tuyển, thời gian đào tạo và tổ hợp xét tuyển. Một số nhóm ngành được giới thiệu gồm kinh doanh và quản lý, công nghệ thông tin và trí tuệ nhân tạo, truyền thông - thiết kế - nghệ thuật, kỹ thuật - công nghệ, luật - ngôn ngữ - khoa học xã hội, y và khoa học sức khỏe. Các tổ hợp được sử dụng tùy ngành, có thể gồm A00, A01, D01, D09, D10, D14, D15 và các tổ hợp khác được ghi trên trang ngành tương ứng.",
+          "Năm 2026, Trường Đại học Công nghệ TP.HCM (HUTECH) tuyển sinh đại học chính quy theo 04 phương thức xét tuyển linh hoạt, phù hợp với Chương trình giáo dục phổ thông 2018 và đặc thù từng lĩnh vực đào tạo. Theo đó, Trường xét tuyển 10.230 chỉ tiêu cho 64 chương trình đào tạo. ​\n\nPhương thức tuyển sinh: 04 phương thức xét tuyển đa đạng\n\nHUTECH xét tuyển 10.000 chỉ tiêu cho 64 chương trình đào tạo theo 04 phương thức xét tuyển đa dạng\n\nCụ thể, 04 phương thức tuyển sinh gồm:",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "article_01.md",
+          "article_06.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 8.678961700003128,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6435782205994116,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999995
+        }
+      },
+      {
+        "question": "Mỗi chương trình đào tạo HUTECH có tối đa bao nhiêu tổ hợp xét tuyển?",
+        "expected_answer": "Mỗi chương trình đào tạo được thiết kế tối đa 12 tổ hợp xét tuyển.",
+        "expected_context": "article_01.md",
+        "response": "Mỗi chương trình đào tạo tại HUTECH được thiết kế tối đa 12 tổ hợp xét tuyển (Document 5).",
+        "retrieved_contexts": [
+          "Năm 2026, Trường Đại học Công nghệ TP.HCM (HUTECH) tuyển sinh đại học chính quy theo 04 phương thức xét tuyển linh hoạt, phù hợp với Chương trình giáo dục phổ thông 2018 và đặc thù từng lĩnh vực đào tạo. Theo đó, Trường xét tuyển 10.230 chỉ tiêu cho 64 chương trình đào tạo. ​\n\nPhương thức tuyển sinh: 04 phương thức xét tuyển đa đạng\n\nHUTECH xét tuyển 10.000 chỉ tiêu cho 64 chương trình đào tạo theo 04 phương thức xét tuyển đa dạng\n\nCụ thể, 04 phương thức tuyển sinh gồm:",
+          "Về tổ hợp xét tuyển, mỗi chương trình đào tạo tại HUTECH được thiết kế tối đa 12 tổ hợp phù hợp chương trình giáo dục phổ thông 2018 và đặc thù chuyên môn. Lĩnh vực Khoa học sức khỏe ưu tiên các tổ hợp có nền tảng khoa học tự nhiên như Toán - Hóa - Sinh; trong khi các lĩnh vực kinh tế, xã hội, truyền thông, thiết kế được xây dựng tổ hợp đa dạng, giúp thí sinh linh hoạt lựa chọn theo năng lực và định hướng nghề nghiệp.",
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "---\n\nTrang thông tin tuyển sinh HUTECH 2026 công bố danh mục chương trình đào tạo, mã xét tuyển, thời gian đào tạo và tổ hợp xét tuyển. Một số nhóm ngành được giới thiệu gồm kinh doanh và quản lý, công nghệ thông tin và trí tuệ nhân tạo, truyền thông - thiết kế - nghệ thuật, kỹ thuật - công nghệ, luật - ngôn ngữ - khoa học xã hội, y và khoa học sức khỏe. Các tổ hợp được sử dụng tùy ngành, có thể gồm A00, A01, D01, D09, D10, D14, D15 và các tổ hợp khác được ghi trên trang ngành tương ứng.",
+          "Năm nay, HUTECH tuyển sinh 64 chương trình đào tạo thuộc 06 lĩnh vực gồm: Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe. Đây đều là những lĩnh vực Nhà trường có thế mạnh đào tạo theo định hướng ứng dụng nhiều năm qua, đồng thời đáp ứng nhu cầu nhân lực chất lượng cao trong bối cảnh chuyển đổi số và phát triển kinh tế - xã hội giai đoạn mới.\n\n|\n|"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "article_01.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.6757639999850653,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.683810109133577,
+          "context_recall": 1.0,
+          "context_precision": 0.499999999975
+        }
+      },
+      {
+        "question": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa HUTECH năm 2026 là bao nhiêu?",
+        "expected_answer": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa là 180.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Xin lỗi, nhưng không có thông tin về chỉ tiêu tuyển sinh dự kiến ngành Y khoa HUTECH năm 2026 trong các tài liệu đã cung cấp.",
+        "retrieved_contexts": [
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630721-hutech-cong-bo-phuong-an-tuyen-sinh-dai-hoc-chinh-quy-du-kien-nam-2026\n\n**Crawled:** 2026-09-25T10:26:27.038441\n\n---\n\n# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026",
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "article_06.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_01.md",
+          "article_02.md",
+          "hutech_2026_hoc_bong.md"
+        ],
+        "expected_source_hit": false,
+        "latency_seconds": 3.853234899987001,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        }
+      },
+      {
+        "question": "Theo thông tin tuyển sinh HUTECH 2026, học phí ngành Y khoa thu bao nhiêu mỗi đợt?",
+        "expected_answer": "Thông tin tuyển sinh ghi học phí ngành Y khoa là 40 triệu đồng mỗi đợt.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Xin lỗi, nhưng không có thông tin về mức học phí cụ thể cho ngành Y khoa trong các tài liệu đã cung cấp.",
+        "retrieved_contexts": [
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026",
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "# Chính sách học bổng tuyển sinh HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630823-hutech-cong-bo-chinh-sach-hoc-bong-tuyen-sinh-khoa-2026\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "hutech_2026_hoc_bong.md"
+        ],
+        "expected_source_hit": false,
+        "latency_seconds": 4.173987899994245,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        }
+      },
+      {
+        "question": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà của HUTECH là gì?",
+        "expected_answer": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà là (028) 3510 8888.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà của HUTECH là (028) 3510 8888 - (028) 3851 1111 (Document 2).",
+        "retrieved_contexts": [
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "×\n\nHUTECH cảm ơn bạn!\n\nĐội ngũ Tư vấn của Trung tâm Tư vấn Tuyển sinh HUTECH sẽ sớm liên hệ bạn trong thời gian sớm\nnhất.\n\nTrong lúc này, bạn có thể tìm hiểu thêm thông tin tại các kênh sau:\n\nEmail\n\n[tuyensinh@hutech.edu.vn](mailto:tuyensinh@hutech.edu.vn)\n\nHotline\n\n(028) 3510 8888 - (028) 3851 1111\n\nZalo\n\n[Đại học HUTECH](https://www.hutech.edu.vn/zalo)",
+          "Điện thoại: (028) 3510 8888 - (028) 3851 1111\n\nZalo: Đại học HUTECH\n\nFacebook: HUTECH - Đại học Công nghệ Tp.HCM\n\nTT. Truyền thông",
+          "Năm nay, HUTECH tuyển sinh 64 chương trình đào tạo thuộc 06 lĩnh vực gồm: Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe. Đây đều là những lĩnh vực Nhà trường có thế mạnh đào tạo theo định hướng ứng dụng nhiều năm qua, đồng thời đáp ứng nhu cầu nhân lực chất lượng cao trong bối cảnh chuyển đổi số và phát triển kinh tế - xã hội giai đoạn mới.\n\n|\n|",
+          "| Để được hỗ trợ nhanh chóng và thuận tiện nhất, các bạn thí sinh và quý phụ huynh có thể liên hệ đến HUTECH qua các nền tảng sau:\n\nTrung tâm Tư vấn tuyển sinh Trường Đại học Công nghệ TP.HCM\n\n- Sai Gon Campus: Phòng B-01.04 (475A Điện Biên Phủ, Phường Thạnh Mỹ Tây, TP.HCM)\n\n- Thu Duc Campus: Sảnh E1 (Phân khu Đào tạo E1, Khu Công nghệ cao, Phường Tăng Nhơn\n\nPhú, TP.HCM)\n\n​Website: www.hutech.edu.vn\n\nEmail: tuyensinh@hutech.edu.vn\n\nĐiện thoại: (028) 3510 8888 - (028) 3851 1111"
+        ],
+        "retrieved_sources": [
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_06.md",
+          "article_01.md",
+          "article_01.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": false,
+        "latency_seconds": 3.5459237000031862,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7137444640933627,
+          "context_recall": 1.0,
+          "context_precision": 0.5888888888692593
+        }
+      }
+    ],
+    "hybrid-rrf": [
+      {
+        "question": "HUTECH áp dụng những phương thức tuyển sinh đại học chính quy nào trong năm 2026?",
+        "expected_answer": "Bốn phương thức chính là xét điểm thi tốt nghiệp THPT, xét học bạ sáu học kỳ, xét điểm V-SAT và xét điểm kỳ thi đánh giá năng lực của ĐHQG TP.HCM. Trường còn thực hiện xét tuyển thẳng và ưu tiên theo quy định.",
+        "expected_context": "article_01.md",
+        "response": "HUTECH áp dụng các phương thức tuyển sinh đại học chính quy năm 2026 gồm: xét kết quả kỳ thi tốt nghiệp THPT 2026; xét kết quả kỳ thi đánh giá đầu vào đại học trên máy tính V-SAT 2026; xét kết quả kỳ thi đánh giá năng lực 2026 của Đại học Quốc gia TP.HCM; xét tuyển thẳng hoặc ưu tiên xét tuyển theo quy định và các chứng chỉ quốc tế SAT, ACT, A level, IB; và xét tuyển học bạ THPT (Document 2).",
+        "retrieved_contexts": [
+          "# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14630721-hutech-cong-bo-phuong-an-tuyen-sinh-dai-hoc-chinh-quy-du-kien-nam-2026\n\n**Crawled:** 2026-09-25T10:26:27.038441\n\n---\n\n# HUTECH công bố phương án tuyển sinh Đại học chính quy năm 2026",
+          "# Quy chế tuyển sinh trình độ Đại học chính quy 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14610630-quy-che-tuyen-sinh-trinh-do-dai-hoc-chinh-quy\n\n**Crawled:** 2026-09-25T10:26:30.954887\n\n---\n\n# Quy chế tuyển sinh trình độ Đại học chính quy 2026\n\nHội đồng Tuyển sinh trường Đại học Công nghệ TP.HCM (HUTECH) ban hành Quy chế tuyển sinh trình độ Đại học chính quy 2026. Quy chế này có hiệu lực từ ngày ký, được áp dụng đối với các khóa tuyển sinh từ năm 2026.",
+          "Trang tuyển sinh đại học chính quy của HUTECH giới thiệu các phương thức tuyển sinh năm 2026 gồm: xét kết quả kỳ thi tốt nghiệp THPT 2026; xét kết quả kỳ thi đánh giá đầu vào đại học trên máy tính V-SAT 2026; xét kết quả kỳ thi đánh giá năng lực 2026 của Đại học Quốc gia TP.HCM; xét tuyển thẳng hoặc ưu tiên xét tuyển theo quy định và các chứng chỉ quốc tế SAT, ACT, A level, IB; và xét tuyển học bạ THPT. Thí sinh cần đối chiếu điều kiện và thời gian đăng ký trên thông báo chính thức của HUTECH.",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "article_03.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 8.862252699997043,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6783916372163054,
+          "context_recall": 0.5,
+          "context_precision": 0.9999999999666667
+        }
+      },
+      {
+        "question": "Học bạ được tính điểm xét tuyển theo phương thức nào của HUTECH 2026?",
+        "expected_answer": "Điểm xét tuyển học bạ là tổng điểm trung bình của ba môn trong tổ hợp xét tuyển qua sáu học kỳ lớp 10, 11 và 12.",
+        "expected_context": "article_01.md",
+        "response": "Học bạ được tính điểm xét tuyển theo phương thức xét tuyển học bạ THPT theo tổ hợp xét tuyển của 06 học kỳ (Document 4).",
+        "retrieved_contexts": [
+          "Trang tuyển sinh đại học chính quy của HUTECH giới thiệu các phương thức tuyển sinh năm 2026 gồm: xét kết quả kỳ thi tốt nghiệp THPT 2026; xét kết quả kỳ thi đánh giá đầu vào đại học trên máy tính V-SAT 2026; xét kết quả kỳ thi đánh giá năng lực 2026 của Đại học Quốc gia TP.HCM; xét tuyển thẳng hoặc ưu tiên xét tuyển theo quy định và các chứng chỉ quốc tế SAT, ACT, A level, IB; và xét tuyển học bạ THPT. Thí sinh cần đối chiếu điều kiện và thời gian đăng ký trên thông báo chính thức của HUTECH.",
+          "Cụ thể, 04 phương thức tuyển sinh gồm:\n\n1. Xét tuyển kết quả Kỳ thi tốt nghiệp THPT 2026\n\n-\nTốt nghiệp THPT hoặc tương đương.\n\n-\nTham gia kỳ thi tốt nghiệp THPT 2026 và đạt điểm đảm bảo chất lượng đầu vào đại học do HUTECH quy định.\n\n-\nĐối với các ngành: Luật, Luật kinh tế, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học, Y khoa: đạt ngưỡng đảm bảo chất lượng đầu vào theo quy định.\n\n2. Xét tuyển học bạ THPT theo tổ hợp xét tuyển của 06 học kỳ",
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "- Phương thức 2: Xét kết quả học tập THPT (học bạ) - theo tổ hợp xét tuyển của 06\nhọc kỳ\n- Phương thức 3: Xét tuyển kết quả kỳ thi V-SAT 2026\n- Phương thức 4: Xét tuyển kết quả kỳ thi Đánh giá năng lực 2026 của Đại học\nQuốc gia Thành phố Hồ Chí Minh (ĐHQG TP.HCM).\nMã\nTT Phương thức Ghi chú\nphương thức\nXét kết quả thi tốt nghiệp\n100\nTHPT 2026\nXét tuyển kết quả thi tốt nghiệp\n1 Xét kết quả thi tốt nghiệp\nTrung học phổ thông 2026\n405 THPT 2026 kết hợp với\nđiểm thi năng khiếu",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_01.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 12.877074300020467,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4669632343353798,
+          "context_recall": 1.0,
+          "context_precision": 0.9166666666361111
+        }
+      },
+      {
+        "question": "Hạn đăng ký Học bổng Tuyển sinh HUTECH 2026 là ngày nào?",
+        "expected_answer": "Thí sinh đăng ký học bổng trực tuyến đến ngày 15/07/2026.",
+        "expected_context": "article_02.md",
+        "response": "Hạn đăng ký học bổng tuyển sinh HUTECH 2026 là trước ngày 15/07/2026 (Document 1, Document 2).",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "**Collected:** 2026-09-25\n\n---\n\nHUTECH công bố học bổng tuyển sinh năm 2026 với các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT. Tiêu chí học bạ có thể dựa trên tổng điểm trung bình ba môn lớp 11, ba môn học kỳ 1 lớp 12 hoặc ba môn cả năm lớp 12. Trang cũng nêu các nhóm học bổng Tài năng Tân sinh viên, Tiếp sức và Giáo dục với điều kiện riêng. Thời hạn đăng ký học bổng cần được kiểm tra lại trên thông báo chính thức.",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "Đăng ký nhận thông tin tuyển sinh\n\nĐăng ký tư vấn\n\nĐĂNG KÝ\n\nTin tuyển sinh\n\n[HUTECH thông báo đăng ký bổ sung học phần Học kỳ 1B năm học 2026-2027](https://www.hutech.edu.vn/tuyensinh/tin-tuyen-sinh/14635373-hutech-thong-bao-dang-ky-bo-sung-hoc-phan-hoc-ky-1b-nam-hoc-2026-2027)\n\nPhòng Đào tạo Trường Đại học Công nghệ TP.HCM (HUTECH) thông báo đến sinh viên đại học chính quy,...",
+          "6.4. Hồ sơ đăng ký xét tuyển\n- Đợt 1: Thí sinh đăng ký trực tuyến trên Cổng thông tin tuyển sinh chung của Bộ\nGDĐT.\n- Đợt 2 (dự kiến): Thí sinh đăng ký trực tuyến vào HUTECH với hồ sơ xét tuyển\nbao gồm:\n+ Phiếu đăng ký xét tuyển (theo mẫu của HUTECH)\n+ Ảnh hoặc bản scan bằng tốt nghiệp THPT hoặc Giấy chứng nhận tốt nghiệp\nTHPT tạm thời năm 2026 (đối với thí sinh tốt nghiệp THPT năm 2026).\n+ Ảnh hoặc bản scan học bạ THPT nếu xét tuyển theo phương thức 2."
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "hutech_2026_hoc_bong.md",
+          "article_01.md",
+          "article_06.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 13.91206369997235,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6472980567900832,
+          "context_recall": 1.0,
+          "context_precision": 0.8333333332916666
+        }
+      },
+      {
+        "question": "Học phí khóa 2026 được giữ ổn định trong thời gian nào?",
+        "expected_answer": "Học phí được công bố từ đầu khóa và giữ ổn định trong toàn khóa học theo thời gian đào tạo chuẩn của từng ngành/chương trình.",
+        "expected_context": "article_02.md",
+        "response": "Học phí khóa 2026 được giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành học (Document 2).",
+        "retrieved_contexts": [
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "Học phí cố định và giữ ổn định trong toàn khóa học giúp thí sinh, phụ huynh chủ động kế hoạch tài chính\n\nHọc phí khóa 2026 được phân theo nhóm ngành/chương trình đào tạo, thời gian đào tạo, số đợt đóng học phí và được thu theo các đợt cố định. Mỗi năm học, Nhà trường tổ chức 04 đợt thu học phí theo mức đã công bố. Cách thu này giúp giảm áp lực tài chính, đồng thời tạo điều kiện để gia đình dễ dàng sắp xếp kế hoạch chi trả theo từng giai đoạn học tập.\n\nII. Chính sách học bổng: đa dạng, hấp dẫn",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026",
+          "Cùng với chính sách học phí ổn định, HUTECH triển khai nhiều chương trình học bổng đa dạng dành cho tân sinh viên khóa 2026, tạo thêm điều kiện để người học yên tâm lựa chọn ngành học phù hợp và phát triển trong môi trường đại học.\n\nI. Chính sách học phí: công bố minh bạch, ổn định toàn khóa",
+          "(3) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Cử nhân Marketing\n\n(4) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Bác sĩ Thú y\n\nChính sách học phí minh bạch và ổn định\n\n- Học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của ngành học.\n\n- Học phí được thu theo các đợt cố định. Mỗi năm học Nhà trường tổ chức 04 đợt thu học phí theo mức học phí đã được công bố."
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 10.80523590001394,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8129448518003829,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999998
+        }
+      },
+      {
+        "question": "Mỗi năm HUTECH thu học phí thành bao nhiêu đợt?",
+        "expected_answer": "Nhà trường tổ chức bốn đợt thu học phí mỗi năm học theo mức đã công bố.",
+        "expected_context": "article_02.md",
+        "response": "Mỗi năm học, HUTECH tổ chức 04 đợt thu học phí theo mức đã công bố (Document 2).",
+        "retrieved_contexts": [
+          "+ Truyền thông đa phương tiện (3,5 năm): 27 triệu đồng/đợt.\n- Học phí chương trình liên kết nước ngoài dự kiến:\n+ Đợt 1-6: 30 triệu đồng/đợt\n+ Đợt 7-12: 35 triệu đồng/đợt\n10.2. Học bổng\nTT Học bổng  Tiêu chí nhận học bổng  Mức học phí được tài trợ\nChính sách\n| ưu đãi   | Đăng ký HUTECH là NV1 trên cổng  |     |     |     |\n| -------- | -------------------------------- | --- | --- | --- |\n5.000.000 VNĐ\n1\nđặc biệt  thông tin của Bộ GDĐT và hoàn tất  (cấn trừ vào học phí học kỳ 1A",
+          "HUTECH có học bổng đặc biệt trị giá 30% học phí toàn khóa dành cho nhóm ngành Khoa học sức khỏe\n\nCùng với Học bổng Tuyển sinh, Trường thực hiện các chính sách học bổng đa dạng và hấp dẫn, bao gồm: Học bổng Tài năng Tân sinh viên, Học bổng Tiếp sức (trị giá 50-75-100% học phí toàn khóa); Học bổng Giáo dục (trị giá 30% học phí toàn khóa); Học bổng Gia đình (trị giá 5% học phí toàn khóa);…",
+          "Học phí cố định và giữ ổn định trong toàn khóa học giúp thí sinh, phụ huynh chủ động kế hoạch tài chính\n\nHọc phí khóa 2026 được phân theo nhóm ngành/chương trình đào tạo, thời gian đào tạo, số đợt đóng học phí và được thu theo các đợt cố định. Mỗi năm học, Nhà trường tổ chức 04 đợt thu học phí theo mức đã công bố. Cách thu này giúp giảm áp lực tài chính, đồng thời tạo điều kiện để gia đình dễ dàng sắp xếp kế hoạch chi trả theo từng giai đoạn học tập.\n\nII. Chính sách học bổng: đa dạng, hấp dẫn",
+          "(3) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Cử nhân Marketing\n\n(4) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Bác sĩ Thú y\n\nChính sách học phí minh bạch và ổn định\n\n- Học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của ngành học.\n\n- Học phí được thu theo các đợt cố định. Mỗi năm học Nhà trường tổ chức 04 đợt thu học phí theo mức học phí đã được công bố.",
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học."
+        ],
+        "retrieved_sources": [
+          "thong_tin_tuyen_sinh_dhcq_2026.md",
+          "article_01.md",
+          "article_02.md",
+          "article_01.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.6592324000084773,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6820377234308296,
+          "context_recall": 1.0,
+          "context_precision": 0.8055555555287036
+        }
+      },
+      {
+        "question": "Học bổng Tuyển sinh 2026 có những mức hỗ trợ nào?",
+        "expected_answer": "Học bổng Tuyển sinh dành cho thí sinh có thành tích học tập THPT có các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Học bổng Tuyển sinh 2026 có các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT (Document 1, Document 2, Document 5).",
+        "retrieved_contexts": [
+          "2.1. Học bổng Tuyển sinh\n\nHUTECH trao tặng Học bổng Tuyển sinh 2026 cho thí sinh có thành tích học tập tốt ở bậc THPT, với các mức hỗ trợ 25% - 50% - 100% học phí toàn khóa.\n\nHọc bổng áp dụng cho thí sinh trên toàn quốc, xét dựa trên kết quả học bạ THPT theo một trong các tiêu chí:\n\n- Tổng điểm trung bình 3 môn lớp 11\n\n- Tổng điểm trung bình 3 môn HK1 lớp 12\n\n- Tổng điểm trung bình 3 môn cả năm lớp 12\n\nCụ thể mức nhận học bổng như sau:",
+          "**Collected:** 2026-09-25\n\n---\n\nHUTECH công bố học bổng tuyển sinh năm 2026 với các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa cho thí sinh có thành tích học tập tốt ở bậc THPT. Tiêu chí học bạ có thể dựa trên tổng điểm trung bình ba môn lớp 11, ba môn học kỳ 1 lớp 12 hoặc ba môn cả năm lớp 12. Trang cũng nêu các nhóm học bổng Tài năng Tân sinh viên, Tiếp sức và Giáo dục với điều kiện riêng. Thời hạn đăng ký học bổng cần được kiểm tra lại trên thông báo chính thức.",
+          "Tiếp tục triển khai chính sách học bổng tuyển sinh hấp dẫn, năm 2026 HUTECH trao tặng Học bổng Tuyển sinh cho tất cả thí sinh có thành tích học tập tốt ở bậc THPT, với mức hỗ trợ 25% - 50% - 100% học phí toàn khóa, khẳng định cam kết đồng hành cùng thế hệ trẻ trong môi trường đào tạo chất lượng, hiện đại để tự tin chinh phục ước mơ nghề nghiệp.",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "II. Chính sách học bổng: đa dạng, hấp dẫn\n\nSong song với chính sách học phí ổn định, HUTECH áp dụng nhiều chính sách học bổng dành cho tân sinh viên khóa 2026, với các mức 25%, 30%, 35%, 50%, 75% và 100% học phí toàn khóa tùy theo từng đối tượng, điều kiện xét cấp và quy định tuyển sinh của Nhà trường.\n\n1. Học bổng dành cho khối ngành Y và Khoa học sức khỏe"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "hutech_2026_hoc_bong.md",
+          "article_01.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 8.903383800003212,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5671567874756015,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999998
+        }
+      },
+      {
+        "question": "Điều kiện nhận học bổng 30% cho khối Khoa học sức khỏe năm 2026 là gì?",
+        "expected_answer": "Thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển một trong các ngành Y khoa, Dược học, Điều dưỡng hoặc Kỹ thuật xét nghiệm y học sẽ được học bổng 30% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Điều kiện nhận học bổng 30% cho khối Khoa học sức khỏe năm 2026 là thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo (Document 4).",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "Bên cạnh đó, HUTECH áp dụng học bổng y tế 35% học phí toàn khóa dành cho con, em cán bộ, nhân viên y tế đang công tác tại các bệnh viện, phòng khám, trung tâm y tế và cơ sở chăm sóc sức khỏe trên cả nước.\n\nHai chính sách học bổng 30% và 35% dành cho khối ngành Y và Khoa học sức khỏe không yêu cầu điều kiện duy trì qua từng học kỳ/năm học.\n\n2. Học bổng dành cho các ngành/chương trình đào tạo Cử nhân, Kỹ sư và nhóm ngành khác\n\n2.1. Học bổng Tuyển sinh",
+          "II. Chính sách học bổng: đa dạng, hấp dẫn\n\nSong song với chính sách học phí ổn định, HUTECH áp dụng nhiều chính sách học bổng dành cho tân sinh viên khóa 2026, với các mức 25%, 30%, 35%, 50%, 75% và 100% học phí toàn khóa tùy theo từng đối tượng, điều kiện xét cấp và quy định tuyển sinh của Nhà trường.\n\n1. Học bổng dành cho khối ngành Y và Khoa học sức khỏe",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "HUTECH có học bổng đặc biệt trị giá 30% học phí toàn khóa dành cho nhóm ngành Khoa học sức khỏe\n\nCùng với Học bổng Tuyển sinh, Trường thực hiện các chính sách học bổng đa dạng và hấp dẫn, bao gồm: Học bổng Tài năng Tân sinh viên, Học bổng Tiếp sức (trị giá 50-75-100% học phí toàn khóa); Học bổng Giáo dục (trị giá 30% học phí toàn khóa); Học bổng Gia đình (trị giá 5% học phí toàn khóa);…"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_01.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 13.14548510001623,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6115625078977699,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999998
+        }
+      },
+      {
+        "question": "Con em nhân viên y tế trúng tuyển HUTECH 2026 được học bổng nào?",
+        "expected_answer": "Con, em cán bộ hoặc nhân viên y tế đang công tác tại cơ sở chăm sóc sức khỏe được học bổng y tế 35% học phí toàn khóa; học bổng này không yêu cầu điều kiện duy trì qua từng học kỳ hoặc năm học.",
+        "expected_context": "article_02.md",
+        "response": "Con em nhân viên y tế trúng tuyển HUTECH 2026 sẽ được nhận học bổng 35% học phí toàn khóa, theo chính sách học bổng dành cho con, em cán bộ, nhân viên y tế đang công tác tại các bệnh viện, phòng khám, trung tâm y tế và cơ sở chăm sóc sức khỏe trên cả nước (Document 5).",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "Bên cạnh đó, HUTECH áp dụng học bổng y tế 35% học phí toàn khóa dành cho con, em cán bộ, nhân viên y tế đang công tác tại các bệnh viện, phòng khám, trung tâm y tế và cơ sở chăm sóc sức khỏe trên cả nước.\n\nHai chính sách học bổng 30% và 35% dành cho khối ngành Y và Khoa học sức khỏe không yêu cầu điều kiện duy trì qua từng học kỳ/năm học.\n\n2. Học bổng dành cho các ngành/chương trình đào tạo Cử nhân, Kỹ sư và nhóm ngành khác\n\n2.1. Học bổng Tuyển sinh",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "|     | dưỡng, Kỹ thuật xét nghiệm y học   |                  |            | học bổng)  |\n| --- | ---------------------------------- | ---------------- | ---------- | ---------- |\n|     | Sinh  viên                         | đại  học  chính  | quy  khối  |            |\nngành sức khoẻ là con, anh/chị/em\n| Khối  |     |     |     | 35% học phí toàn khóa học  |\n| ----- | --- | --- | --- | -------------------------- |\nruột của cán bộ, nhân viên y tế đang"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_01.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 8.744110500003444,
+        "metrics": {
+          "faithfulness": 0.8333333333333334,
+          "answer_relevancy": 0.5828633118320408,
+          "context_recall": 1.0,
+          "context_precision": 0.5888888888692593
+        }
+      },
+      {
+        "question": "Ai có thể nhận Học bổng Tài năng Tân sinh viên và giá trị học bổng là bao nhiêu?",
+        "expected_answer": "Tân sinh viên chính quy 2026 đạt giải từ cấp tỉnh/thành phố trở lên trong các kỳ thi học sinh giỏi, khoa học kỹ thuật, năng khiếu văn hóa, nghệ thuật hoặc thể thao có thể được học bổng 50%, 75% hoặc 100% học phí toàn khóa.",
+        "expected_context": "article_02.md",
+        "response": "Học bổng Tài năng Tân sinh viên dành cho tân sinh viên chính quy khóa 2026 đạt giải Nhất, Nhì, Ba trong các cuộc thi Quốc tế, HSG cấp Quốc gia hoặc cuộc thi Khoa học kỹ thuật cấp Quốc gia; các kỳ thi năng khiếu văn hóa, nghệ thuật, thể thao cấp Quốc gia; hoặc kỳ thi HSG, Olympic, văn hóa, nghệ thuật, thể thao từ cấp Tỉnh/Thành phố trở lên trong thời gian học THPT. Giá trị học bổng là 50%, 75%, hoặc 100% học phí toàn khóa học (Document 1).",
+        "retrieved_contexts": [
+          "2.2. Học bổng Tài năng Tân sinh viên\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 đạt giải Nhất, Nhì, Ba trong các cuộc thi Quốc tế, HSG cấp Quốc gia hoặc cuộc thi Khoa học kỹ thuật cấp Quốc gia; các kỳ thi năng khiếu văn hóa, nghệ thuật, thể thao cấp Quốc gia; hoặc kỳ thi HSG, Olympic, văn hóa, nghệ thuật, thể thao từ cấp Tỉnh/Thành phố trở lên trong thời gian học THPT.\n\n- Giá trị học bổng: 50%, 75%, 100% học phí toàn khóa học.",
+          "Cụ thể mức nhận học bổng như sau:\n\nThí sinh đăng ký học bổng đến ngày 15/7/2026 theo hình thức trực tuyến  [TẠI ĐÂY](https://xethocbong.hutech.edu.vn/register) .\n\nBảng học phí, học bổng Chương trình Đại học chính quy khóa 2026 theo chương trình đào tạo chuẩn cụ thể như sau:\n\n2.2. Học bổng Tài năng Tân sinh viên",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "2.5. Học bổng Gia đình\n\n- Đối tượng: Sinh viên có người thân là bố, mẹ, vợ/chồng, anh, chị, em ruột trong gia đình đã và đang học tại HUTECH.\n\n- Giá trị học bổng: 5% học phí trong toàn khóa học.\n\n- Điều kiện duy trì học bổng: Không cần điều kiện duy trì.\n\n|\n*Ghi chú:\n\n- Học bổng Tài năng, Học bổng Tiếp sức, Học bổng Giáo dục, Học bổng dành cho khối ngành Y và Khoa học sức khỏe không áp dụng đồng thời với Học bổng tuyển sinh.",
+          "- Điều kiện duy trì học bổng: Học bổng Tài năng áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được.\n\n2.3. Học bổng Tiếp sức\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 có học lực trung bình 3 năm THPT đạt loại Khá trở lên và hoàn cảnh đặc biệt khó khăn đáp ứng 01 trong các tiêu chí:"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 13.335658899974078,
+        "metrics": {
+          "faithfulness": 0.8571428571428571,
+          "answer_relevancy": 0.5710179671904986,
+          "context_recall": 1.0,
+          "context_precision": 0.99999999995
+        }
+      },
+      {
+        "question": "Điều kiện duy trì Học bổng Tài năng sau năm đầu tiên là gì?",
+        "expected_answer": "Sinh viên cần đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập tối thiểu là 2.5/4.0 với học bổng 50%, và 3.2/4.0 với học bổng 75% hoặc 100%.",
+        "expected_context": "article_02.md",
+        "response": "Điều kiện duy trì Học bổng Tài năng sau năm đầu tiên là sinh viên phải đạt điểm rèn luyện từ 80 trở lên và điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được (Document 1).",
+        "retrieved_contexts": [
+          "- Điều kiện duy trì học bổng: Học bổng Tài năng áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập từ 2.5/4.0 (đối với học bổng 50%) và từ 3.2/4.0 (đối với học bổng 75%, 100%) tùy theo mức học bổng nhận được.\n\n2.3. Học bổng Tiếp sức\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 có học lực trung bình 3 năm THPT đạt loại Khá trở lên và hoàn cảnh đặc biệt khó khăn đáp ứng 01 trong các tiêu chí:",
+          "2.4. Học bổng Giáo dục\n\n- Đối tượng: Tân sinh viên chính quy khóa 2026 là con, em ruột của cán bộ, giáo viên, nhân viên đang làm việc tại Sở Giáo dục - Đào tạo và Trường THPT trên cả nước.\n\n- Giá trị học bổng: 30% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Giáo dục áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm trung bình học tập từ 2.5/4.0 và điểm đánh giá rèn luyện đạt từ 80 trở lên.\n\n2.5. Học bổng Gia đình",
+          "2.5. Học bổng Gia đình\n\n- Đối tượng: Sinh viên có người thân là bố, mẹ, vợ/chồng, anh, chị, em ruột trong gia đình đã và đang học tại HUTECH.\n\n- Giá trị học bổng: 5% học phí trong toàn khóa học.\n\n- Điều kiện duy trì học bổng: Không cần điều kiện duy trì.\n\n|\n*Ghi chú:\n\n- Học bổng Tài năng, Học bổng Tiếp sức, Học bổng Giáo dục, Học bổng dành cho khối ngành Y và Khoa học sức khỏe không áp dụng đồng thời với Học bổng tuyển sinh.",
+          "- Mồ côi, thuộc diện hộ nghèo/cận nghèo;\n\n- Bị khuyết tật có giấy xác nhận khuyết tật của cơ quan có thẩm quyền cấp;\n\n- Dân tộc thiểu số, thuộc diện hộ nghèo/cận nghèo.\n\n- Giá trị học bổng: 50%, 75%, 100% học phí toàn khóa học.\n\n- Điều kiện duy trì học bổng: Học bổng Tiếp sức áp dụng trong năm học đầu tiên, được duy trì trong các năm học tiếp theo nếu sinh viên đạt điểm rèn luyện từ 80 trở lên và điểm trung bình học tập từ 2.5/4.0.\n\n2.4. Học bổng Giáo dục",
+          "Tỉnh/Thành phố trở lên trong thời bổng 50%) và từ 3.2/4.0 (đối với\ngian học trung học phổ thông học bổng 75%, 100%) tùy theo\n(THPT) mức học bổng nhận được\nHọc lực trung bình 03 năm THPT\nđạt loại Khá trở lên, có hoàn cảnh\nđặc biệt khó khăn đáp ứng một trong\n50%, 75%, 100% học phí trong\ncác tiêu chí sau:\nnăm học đầu tiên, được duy trì\n- Mồ côi, thuộc diện hộ nghèo/ cận\ntrong các năm học tiếp theo nếu\n5 Tiếp sức nghèo.\nsinh viên đạt điểm rèn luyện từ\n- Bị khuyết tật có giấy xác nhận"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "article_02.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.213832299981732,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5194245205706017,
+          "context_recall": 1.0,
+          "context_precision": 0.6999999999766667
+        }
+      },
+      {
+        "question": "HUTECH tuyển sinh 2026 bao nhiêu chương trình đào tạo thuộc bao nhiêu lĩnh vực?",
+        "expected_answer": "HUTECH tuyển sinh 64 chương trình đào tạo thuộc sáu lĩnh vực.",
+        "expected_context": "article_01.md",
+        "response": "HUTECH tuyển sinh 2026 với 64 chương trình đào tạo thuộc 06 lĩnh vực (Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe) (Document 1).",
+        "retrieved_contexts": [
+          "Năm nay, HUTECH tuyển sinh 64 chương trình đào tạo thuộc 06 lĩnh vực gồm: Công nghệ thông tin và Trí tuệ nhân tạo; Kỹ thuật - Công nghệ; Kinh doanh và Quản lý; Truyền thông - Thiết kế - Nghệ thuật; Luật - Ngôn ngữ - Khoa học xã hội; Khoa học sức khỏe. Đây đều là những lĩnh vực Nhà trường có thế mạnh đào tạo theo định hướng ứng dụng nhiều năm qua, đồng thời đáp ứng nhu cầu nhân lực chất lượng cao trong bối cảnh chuyển đổi số và phát triển kinh tế - xã hội giai đoạn mới.\n\n|\n|",
+          "Năm 2026, Trường Đại học Công nghệ TP.HCM (HUTECH) tuyển sinh đại học chính quy theo 04 phương thức xét tuyển linh hoạt, phù hợp với Chương trình giáo dục phổ thông 2018 và đặc thù từng lĩnh vực đào tạo. Theo đó, Trường xét tuyển 10.230 chỉ tiêu cho 64 chương trình đào tạo. ​\n\nPhương thức tuyển sinh: 04 phương thức xét tuyển đa đạng\n\nHUTECH xét tuyển 10.000 chỉ tiêu cho 64 chương trình đào tạo theo 04 phương thức xét tuyển đa dạng\n\nCụ thể, 04 phương thức tuyển sinh gồm:",
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "Về tổ hợp xét tuyển, mỗi chương trình đào tạo tại HUTECH được thiết kế tối đa 12 tổ hợp phù hợp chương trình giáo dục phổ thông 2018 và đặc thù chuyên môn. Lĩnh vực Khoa học sức khỏe ưu tiên các tổ hợp có nền tảng khoa học tự nhiên như Toán - Hóa - Sinh; trong khi các lĩnh vực kinh tế, xã hội, truyền thông, thiết kế được xây dựng tổ hợp đa dạng, giúp thí sinh linh hoạt lựa chọn theo năng lực và định hướng nghề nghiệp.",
+          "Danh mục chương trình đào tạo: 64 chương trình đào tạo đa dạng với nhiều lĩnh vực “hot” thu hút thí sinh"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "article_01.md",
+          "article_02.md",
+          "article_01.md",
+          "article_01.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.094309099979,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6435782205994116,
+          "context_recall": 1.0,
+          "context_precision": 0.6999999999766667
+        }
+      },
+      {
+        "question": "Mỗi chương trình đào tạo HUTECH có tối đa bao nhiêu tổ hợp xét tuyển?",
+        "expected_answer": "Mỗi chương trình đào tạo được thiết kế tối đa 12 tổ hợp xét tuyển.",
+        "expected_context": "article_01.md",
+        "response": "Mỗi chương trình đào tạo tại HUTECH được thiết kế tối đa 12 tổ hợp xét tuyển (Document 5).",
+        "retrieved_contexts": [
+          "Năm 2026, Trường Đại học Công nghệ TP.HCM (HUTECH) tuyển sinh đại học chính quy theo 04 phương thức xét tuyển linh hoạt, phù hợp với Chương trình giáo dục phổ thông 2018 và đặc thù từng lĩnh vực đào tạo. Theo đó, Trường xét tuyển 10.230 chỉ tiêu cho 64 chương trình đào tạo. ​\n\nPhương thức tuyển sinh: 04 phương thức xét tuyển đa đạng\n\nHUTECH xét tuyển 10.000 chỉ tiêu cho 64 chương trình đào tạo theo 04 phương thức xét tuyển đa dạng\n\nCụ thể, 04 phương thức tuyển sinh gồm:",
+          "Về tổ hợp xét tuyển, mỗi chương trình đào tạo tại HUTECH được thiết kế tối đa 12 tổ hợp phù hợp chương trình giáo dục phổ thông 2018 và đặc thù chuyên môn. Lĩnh vực Khoa học sức khỏe ưu tiên các tổ hợp có nền tảng khoa học tự nhiên như Toán - Hóa - Sinh; trong khi các lĩnh vực kinh tế, xã hội, truyền thông, thiết kế được xây dựng tổ hợp đa dạng, giúp thí sinh linh hoạt lựa chọn theo năng lực và định hướng nghề nghiệp.",
+          "---\n\nTrang thông tin tuyển sinh HUTECH 2026 công bố danh mục chương trình đào tạo, mã xét tuyển, thời gian đào tạo và tổ hợp xét tuyển. Một số nhóm ngành được giới thiệu gồm kinh doanh và quản lý, công nghệ thông tin và trí tuệ nhân tạo, truyền thông - thiết kế - nghệ thuật, kỹ thuật - công nghệ, luật - ngôn ngữ - khoa học xã hội, y và khoa học sức khỏe. Các tổ hợp được sử dụng tùy ngành, có thể gồm A00, A01, D01, D09, D10, D14, D15 và các tổ hợp khác được ghi trên trang ngành tương ứng.",
+          "# Chương trình và tổ hợp xét tuyển HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh\n\n**Collected:** 2026-09-25\n\n---",
+          "LĨNH VỰC TRUYỀN THÔNG - THIẾT KẾ - NGHỆ THUẬT\n\n| STT\n| Chương trình đào tạo\n| Mã xét tuyển\n\n| 1\n| Truyền thông đa phương tiện\n| 7320104\n\n| 2\n| Quan hệ công chúng\n| 7320108\n\nThời gian đào tạo: 3,5 năm - Số tín chỉ: 125 - Bằng cấp: Cử nhân\n\nTổ hợp xét tuyển:"
+        ],
+        "retrieved_sources": [
+          "article_01.md",
+          "article_01.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "hutech_2026_chuong_trinh_dao_tao.md",
+          "article_06.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 4.35859619997791,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.683810109133577,
+          "context_recall": 1.0,
+          "context_precision": 0.5833333333041666
+        }
+      },
+      {
+        "question": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa HUTECH năm 2026 là bao nhiêu?",
+        "expected_answer": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa là 180.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Xin lỗi, nhưng không có thông tin về chỉ tiêu tuyển sinh dự kiến ngành Y khoa HUTECH năm 2026 trong các tài liệu đã cung cấp.",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "+ Ngành đào tạo cử nhân (3,5 năm); Kiến trúc, Thú y, Thú y công nghệ số (4.5\nnăm): 17 triệu đồng/đợt\n+ Dược học (5 năm); Kỹ thuật xét nghiệm y học, Truyền thông đa phương\ntiện, thiết kế đồ họa, Công nghệ điện ảnh truyền hình, Thanh nhạc (3,5 năm):\n18 triệu đồng/đợt.\n+ Ngành Y khoa (6 năm): 40 triệu đồng/đợt\n- Học phí chương trình quốc tế dự kiến:\n+ Ngành đào tạo kỹ sư (4 năm): 24,75 triệu đồng/đợt\n+ Ngành đào tạo cử nhân (3,5 năm): 25,5 triệu đồng/đợt",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---",
+          "Tin hướng nghiệp\n\n[Lộ trình học ngành Y khoa từ năm 1 đến tốt nghiệp](https://www.hutech.edu.vn/tuyensinh/tin-huong-nghiep/14634009-lo-trinh-hoc-nganh-y-khoa-tu-nam-1-den-tot-nghiep)\n\nLộ trình học ngành Y khoa là hành trình dài 6 năm được thiết kế bài bản, chia thành các giai đoạn...\n\n[Học phí ngành Y khoa mới nhất](https://www.hutech.edu.vn/tuyensinh/tin-huong-nghiep/14634007-hoc-phi-nganh-y-khoa-moi-nhat)"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "thong_tin_tuyen_sinh_dhcq_2026.md",
+          "article_06.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md",
+          "article_06.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 2.493088599992916,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        }
+      },
+      {
+        "question": "Theo thông tin tuyển sinh HUTECH 2026, học phí ngành Y khoa thu bao nhiêu mỗi đợt?",
+        "expected_answer": "Thông tin tuyển sinh ghi học phí ngành Y khoa là 40 triệu đồng mỗi đợt.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Xin lỗi, nhưng thông tin về mức học phí cụ thể được thu mỗi đợt cho ngành Y khoa không được cung cấp trong các tài liệu đã cho.",
+        "retrieved_contexts": [
+          "Năm 2026, nhân dịp chính thức triển khai tuyển sinh đào tạo ngành Y khoa, HUTECH dành tặng học bổng 30% học phí toàn khóa cho thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển các ngành thuộc khối Khoa học sức khỏe, gồm Y khoa, Dược học, Điều dưỡng và Kỹ thuật xét nghiệm y học.\n\nHUTECH tặng học bổng 30% học phí toàn khoá cho tân sinh viên khối ngành Khoa học sức khoẻ 2026",
+          "Đặc biệt, HUTECH có chính sách học bổng riêng dành cho nhóm ngành Khoa học sức khoẻ (Y khoa, Dược học, Điều dưỡng, Kỹ thuật xét nghiệm y học) với giá trị 30% học phí toàn khóa. Thí sinh cần đăng ký xét học bổng và gửi minh chứng kết quả học tập THPT theo quy định về HUTECH trước ngày 15/07/2026, đồng thời trúng tuyển vào Trường theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+          "(3) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Cử nhân Marketing\n\n(4) Chương trình đào tạo liên ngành, sinh viên tốt nghiệp được nhận bằng Bác sĩ Thú y\n\nChính sách học phí minh bạch và ổn định\n\n- Học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của ngành học.\n\n- Học phí được thu theo các đợt cố định. Mỗi năm học Nhà trường tổ chức 04 đợt thu học phí theo mức học phí đã được công bố.",
+          "Đối với khóa tuyển sinh 2026, HUTECH áp dụng chính sách học phí ổn định toàn khóa đối với tất cả ngành/chương trình đào tạo (đã bao gồm học phí Giáo dục thể chất, Giáo dục Quốc phòng và An ninh). Mức học phí được công bố ngay từ đầu khóa và giữ nguyên trong thời gian đào tạo theo chương trình chuẩn, giúp phụ huynh và thí sinh chủ động hoạch định kế hoạch tài chính dài hạn ngay từ thời điểm nhập học.",
+          "Trường Đại học Công nghệ TP.HCM (HUTECH) công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026. Theo đó, học phí được xác định cố định cho toàn khóa học và giữ ổn định trong thời gian đào tạo theo chương trình chuẩn của từng ngành, giúp thí sinh, phụ huynh chủ động kế hoạch tài chính ngay từ thời điểm nhập học.\n\nHUTECH chính thức công bố chính sách học phí và học bổng áp dụng cho thí sinh trúng tuyển khóa 2026"
+        ],
+        "retrieved_sources": [
+          "article_02.md",
+          "article_01.md",
+          "article_01.md",
+          "article_02.md",
+          "article_02.md"
+        ],
+        "expected_source_hit": false,
+        "latency_seconds": 2.4597994000068866,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        }
+      },
+      {
+        "question": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà của HUTECH là gì?",
+        "expected_answer": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà là (028) 3510 8888.",
+        "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md",
+        "response": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà của HUTECH là (028) 3510 8888 (Document 1).",
+        "retrieved_contexts": [
+          "+ 276 Điện Biên Phủ, Phường Gia Định, TP.HCM\n+ Phân khu Đào tạo E1, Khu Công nghệ cao, Phường Tăng Nhơn Phú, TP.HCM\n+ Lô E2b-4, đường D1, Khu Công nghệ cao, Phường Tăng Nhơn Phú, TP.HCM\n4. Địa chỉ trang thông tin điện tử\nhttp://www.hutech.edu.vn\n5. Địa chỉ công khai quy chế tuyển sinh\nhttps://www.hutech.edu.vn/tuyensinh\n6. Số điện thoại liên hệ tuyển sinh\n- Chương trình chính quy đại trà: (028) 3510 8888\n- Chương trình quốc tế; Chương trình liên kết đào tạo với nước ngoài: 0818 177 207",
+          "Điện thoại: (028) 3510 8888 - (028) 3851 1111\n\nZalo: Đại học HUTECH\n\nFacebook: HUTECH - Đại học Công nghệ Tp.HCM\n\nTT. Truyền thông",
+          "| Để được hỗ trợ nhanh chóng và thuận tiện nhất, các bạn thí sinh và quý phụ huynh có thể liên hệ đến HUTECH qua các nền tảng sau:\n\nTrung tâm Tư vấn tuyển sinh Trường Đại học Công nghệ TP.HCM\n\n- Sai Gon Campus: Phòng B-01.04 (475A Điện Biên Phủ, Phường Thạnh Mỹ Tây, TP.HCM)\n\n- Thu Duc Campus: Sảnh E1 (Phân khu Đào tạo E1, Khu Công nghệ cao, Phường Tăng Nhơn\n\nPhú, TP.HCM)\n\n​Website: www.hutech.edu.vn\n\nEmail: tuyensinh@hutech.edu.vn\n\nĐiện thoại: (028) 3510 8888 - (028) 3851 1111",
+          "# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/dai-hoc-nganh-dao-tao\n\n**Crawled:** 2026-09-25T10:26:33.464496\n\n---\n\n# THÔNG TIN TUYỂN SINH 2026 - HUTECH\n\n[THƯ VIỆN](https://lib.hutech.edu.vn)\nLIÊN HỆ\n\n- VN\n\n- EN\n\n-\n[Trang chủ](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang tuyển\nsinh](https://www.hutech.edu.vn/tuyensinh)\n\n- [Trang HUTECH](https://www.hutech.edu.vn/)\n\n-\nChương trình\n\n- [Đại học chính\nquy](https://www.hutech.edu.vn/tuyensinh/daihoc)",
+          "# Phương thức tuyển sinh đại học HUTECH 2026\n\n**Source:** https://www.hutech.edu.vn/tuyensinh/daihoc\n\n**Collected:** 2026-09-25\n\n---"
+        ],
+        "retrieved_sources": [
+          "thong_tin_tuyen_sinh_dhcq_2026.md",
+          "article_01.md",
+          "article_01.md",
+          "article_06.md",
+          "hutech_2026_phuong_thuc_tuyen_sinh.md"
+        ],
+        "expected_source_hit": true,
+        "latency_seconds": 3.982201200007694,
+        "metrics": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7137444640933629,
+          "context_recall": 1.0,
+          "context_precision": 0.9999999999666667
+        }
+      }
+    ]
+  }
+}

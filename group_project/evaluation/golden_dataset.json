@@ -1,17 +1,77 @@
 [
-    { "question": "Hạn cuối nộp hồ sơ tuyển sinh năm 2026 là khi nào?", "expected_answer": "Hạn cuối nộp hồ sơ cho đợt chính là 31/07/2026. Các đợt bổ sung công bố trên cổng tuyển sinh.", "expected_context": "tuyen-sinh.md" },
-    { "question": "Những giấy tờ cần nộp khi đăng ký tuyển sinh là gì?", "expected_answer": "Bản sao công chứng bằng tốt nghiệp/tạm thời, bảng điểm, CMND/CCCD/Hộ chiếu, bản sao giấy khai sinh và ảnh 3x4.", "expected_context": "tuyen-sinh.md" },
-    { "question": "Phí xét tuyển là bao nhiêu và nộp bằng cách nào?", "expected_answer": "Phí xét tuyển là 200.000 VND, nộp online qua cổng tuyển sinh hoặc chuyển khoản theo hướng dẫn trên trang trường.", "expected_context": "phi-thi-tuyen.md" },
-    { "question": "Trường xét tuyển theo những phương thức nào?", "expected_answer": "Trường áp dụng xét tuyển theo kết quả kỳ thi quốc gia/điểm thi đánh giá năng lực, xét tuyển theo hồ sơ và xét tuyển thẳng theo quy định.", "expected_context": "phuong-thuc-tuyen-sinh.md" },
-    { "question": "Môn thi bắt buộc để xét tuyển ngành Công nghệ thông tin là gì?", "expected_answer": "Các môn thường dùng gồm Toán, Vật lý và Tiếng Anh; cụ thể theo đề án tuyển sinh từng năm.", "expected_context": "de-thi-vao-ctdt.md" },
-    { "question": "Làm thế nào để biết trạng thái hồ sơ đã nộp?", "expected_answer": "Đăng nhập vào tài khoản trên cổng tuyển sinh, kiểm tra mục 'trạng thái hồ sơ' hoặc nhận thông báo qua email/SDT cung cấp.", "expected_context": "tuyen-sinh.md" },
-    { "question": "Trường có ưu tiên tuyển thẳng cho học sinh giỏi quốc gia không?", "expected_answer": "Có, nhà trường áp dụng quyền tuyển thẳng cho thí sinh đạt giải trong kỳ thi học sinh giỏi cấp quốc gia theo quy định tuyển thẳng.", "expected_context": "quyen-tuyen-thang.md" },
-    { "question": "Điều kiện nhận học bổng tuyển sinh là gì?", "expected_answer": "Học bổng tuyển sinh xét theo điểm đầu vào, thành tích học tập và hoàn cảnh gia đình; thông tin chi tiết có trong thông báo học bổng.", "expected_context": "hoc-bong.md" },
-    { "question": "Thủ tục xác nhận nhập học sau khi trúng tuyển như thế nào?", "expected_answer": "Thí sinh xác nhận nhập học bằng cách nộp lệ phí xác nhận theo hướng dẫn và hoàn tất hồ sơ nhập học trước hạn quy định.", "expected_context": "nhap-hoc.md" },
-    { "question": "Có thể hoãn nhập học được không và thủ tục thế nào?", "expected_answer": "Có thể xin hoãn nhập học trong trường hợp có lý do chính đáng; nộp đơn xin hoãn kèm chứng từ chứng minh theo quy định nhà trường.", "expected_context": "hoan-nhap-hoc.md" },
-    { "question": "Quá trình xét tuyển bổ sung diễn ra khi nào?", "expected_answer": "Xét tuyển bổ sung được tổ chức sau khi công bố danh sách trúng tuyển đợt chính; thời gian cụ thể được thông báo trên website trường.", "expected_context": "lich-tuyen-sinh.md" },
-    { "question": "Hồ sơ của thí sinh nước ngoài cần những gì?", "expected_answer": "Hồ sơ gồm hộ chiếu, văn bằng và bảng điểm được hợp pháp hóa lãnh sự, bằng dịch sang tiếng Việt công chứng, và giấy tạm trú nếu có.", "expected_context": "tuyen-sinh-quoc-te.md" },
-    { "question": "Làm sao để đổi ngành học sau khi đã nhập học?", "expected_answer": "Nộp đơn xin chuyển ngành theo quy định nhà trường, có thể cần đáp ứng điểm sàn hoặc qua phỏng vấn tuyển chọn nội bộ.", "expected_context": "chuyen-nganh.md" },
-    { "question": "Trường có giới hạn chỉ tiêu cho từng ngành không?", "expected_answer": "Có, mỗi ngành có chỉ tiêu tuyển sinh hàng năm; chi tiết chỉ tiêu được công bố trong đề án tuyển sinh.", "expected_context": "chi-tieu-nganh.md" },
-    { "question": "Ai là người liên hệ khi cần hỗ trợ về hồ sơ tuyển sinh?", "expected_answer": "Liên hệ Phòng Tuyển sinh - Số điện thoại và email được công bố trên website trường để được hướng dẫn cụ thể.", "expected_context": "lien-he-tuyen-sinh.md" }
+  {
+    "question": "HUTECH áp dụng những phương thức tuyển sinh đại học chính quy nào trong năm 2026?",
+    "expected_answer": "Bốn phương thức chính là xét điểm thi tốt nghiệp THPT, xét học bạ sáu học kỳ, xét điểm V-SAT và xét điểm kỳ thi đánh giá năng lực của ĐHQG TP.HCM. Trường còn thực hiện xét tuyển thẳng và ưu tiên theo quy định.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Học bạ được tính điểm xét tuyển theo phương thức nào của HUTECH 2026?",
+    "expected_answer": "Điểm xét tuyển học bạ là tổng điểm trung bình của ba môn trong tổ hợp xét tuyển qua sáu học kỳ lớp 10, 11 và 12.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Hạn đăng ký Học bổng Tuyển sinh HUTECH 2026 là ngày nào?",
+    "expected_answer": "Thí sinh đăng ký học bổng trực tuyến đến ngày 15/07/2026.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Học phí khóa 2026 được giữ ổn định trong thời gian nào?",
+    "expected_answer": "Học phí được công bố từ đầu khóa và giữ ổn định trong toàn khóa học theo thời gian đào tạo chuẩn của từng ngành/chương trình.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Mỗi năm HUTECH thu học phí thành bao nhiêu đợt?",
+    "expected_answer": "Nhà trường tổ chức bốn đợt thu học phí mỗi năm học theo mức đã công bố.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Học bổng Tuyển sinh 2026 có những mức hỗ trợ nào?",
+    "expected_answer": "Học bổng Tuyển sinh dành cho thí sinh có thành tích học tập THPT có các mức hỗ trợ 25%, 50% và 100% học phí toàn khóa.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Điều kiện nhận học bổng 30% cho khối Khoa học sức khỏe năm 2026 là gì?",
+    "expected_answer": "Thí sinh đăng ký học bổng trước ngày 15/7 và trúng tuyển một trong các ngành Y khoa, Dược học, Điều dưỡng hoặc Kỹ thuật xét nghiệm y học sẽ được học bổng 30% học phí toàn khóa.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Con em nhân viên y tế trúng tuyển HUTECH 2026 được học bổng nào?",
+    "expected_answer": "Con, em cán bộ hoặc nhân viên y tế đang công tác tại cơ sở chăm sóc sức khỏe được học bổng y tế 35% học phí toàn khóa; học bổng này không yêu cầu điều kiện duy trì qua từng học kỳ hoặc năm học.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Ai có thể nhận Học bổng Tài năng Tân sinh viên và giá trị học bổng là bao nhiêu?",
+    "expected_answer": "Tân sinh viên chính quy 2026 đạt giải từ cấp tỉnh/thành phố trở lên trong các kỳ thi học sinh giỏi, khoa học kỹ thuật, năng khiếu văn hóa, nghệ thuật hoặc thể thao có thể được học bổng 50%, 75% hoặc 100% học phí toàn khóa.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Điều kiện duy trì Học bổng Tài năng sau năm đầu tiên là gì?",
+    "expected_answer": "Sinh viên cần đạt điểm rèn luyện từ 80 trở lên; điểm trung bình học tập tối thiểu là 2.5/4.0 với học bổng 50%, và 3.2/4.0 với học bổng 75% hoặc 100%.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "HUTECH tuyển sinh 2026 bao nhiêu chương trình đào tạo thuộc bao nhiêu lĩnh vực?",
+    "expected_answer": "HUTECH tuyển sinh 64 chương trình đào tạo thuộc sáu lĩnh vực.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Mỗi chương trình đào tạo HUTECH có tối đa bao nhiêu tổ hợp xét tuyển?",
+    "expected_answer": "Mỗi chương trình đào tạo được thiết kế tối đa 12 tổ hợp xét tuyển.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa HUTECH năm 2026 là bao nhiêu?",
+    "expected_answer": "Chỉ tiêu tuyển sinh dự kiến ngành Y khoa là 180.",
+    "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md"
+  },
+  {
+    "question": "Theo thông tin tuyển sinh HUTECH 2026, học phí ngành Y khoa thu bao nhiêu mỗi đợt?",
+    "expected_answer": "Thông tin tuyển sinh ghi học phí ngành Y khoa là 40 triệu đồng mỗi đợt.",
+    "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md"
+  },
+  {
+    "question": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà của HUTECH là gì?",
+    "expected_answer": "Số điện thoại liên hệ tuyển sinh chương trình chính quy đại trà là (028) 3510 8888.",
+    "expected_context": "thong_tin_tuyen_sinh_dhcq_2026.md"
+  }
 ]
