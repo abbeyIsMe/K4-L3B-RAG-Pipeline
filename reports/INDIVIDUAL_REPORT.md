@@ -2,17 +2,10 @@
 
 ## Thông tin
 
-<<<<<<< Updated upstream
-- Họ và tên:
-- Mã học viên:
-- Nhóm:
-- Repository/branch:
-=======
 - Họ và tên: Hồ Hoàng Phương Anh
 - Mã học viên: 2A202602460
 - Nhóm: Hello Data
 - Repository/branch: https://github.com/abbeyIsMe/K4-L3B-RAG-Pipeline
->>>>>>> Stashed changes
 
 ## Phần việc đã thực hiện
 
@@ -31,19 +24,9 @@ Những phần việc trên đều có thể đối chiếu bằng file báo cá
    - **Lý do/evidence:** Chủ đề này có dữ liệu dễ thu thập, nội dung mang tính chính thống, và phù hợp với yêu cầu “hỏi đáp theo chính sách, quy trình, thông tin tuyển sinh”.
    - **Trade-off:** Đòi hỏi nội dung QA phải rõ ràng và định hình dữ liệu theo domain cụ thể; tuy nhiên, nhược điểm này được bù bằng tính dễ đo lường và dễ tạo golden dataset.
 
-<<<<<<< Updated upstream
-1. **Quyết định:**  
-   **Lý do/evidence:**  
-   **Trade-off:**
-
-2. **Quyết định:**  
-   **Lý do/evidence:**  
-   **Trade-off:**
-=======
 2. **Quyết định:** Dùng golden dataset theo topic tuyển sinh để kiểm tra chất lượng hệ thống.
    - **Lý do/evidence:** Golden dataset giúp đánh giá chatbot một cách có hệ thống, dễ so sánh hai cấu hình retrieval (dense-only vs hybrid + RRF) và theo dõi các lỗi chính như thiếu context, hallucination.
    - **Trade-off:** Chi phí thiết kế dataset lớn hơn, nhưng hiệu quả trong việc đánh giá và báo cáo cao hơn nhiều so với chỉ chạy thử dùm.
->>>>>>> Stashed changes
 
 ## Kiểm thử và kết quả
 
@@ -67,10 +50,5 @@ Những phần việc trên đều có thể đối chiếu bằng file báo cá
 
 Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
 
-<<<<<<< Updated upstream
-- Ngày:
-- Tên thành viên:
-=======
 - Ngày: 25/09/2026
 - Tên thành viên: Hồ Hoàng Phương Anh
->>>>>>> Stashed changes
